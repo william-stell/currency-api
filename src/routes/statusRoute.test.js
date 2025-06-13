@@ -2,7 +2,7 @@ import http from 'http';
 import request from 'supertest';
 import app from '../app.js';
 
-import packageJson from '../../package.json';
+import { versionGet } from '../utils/version.js';
 
 let server;
 
@@ -21,7 +21,7 @@ describe('GET /status', () => {
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual({
       status: 'ok',
-      version: packageJson.version
+      version: versionGet()
     });
   });
 });

@@ -1,8 +1,9 @@
-import packageJson from '../../package.json';
+
+import { versionGet } from "../utils/version.js";
 
 export const statusGet = (req, res) => {
   res.json({
     status: 'ok',
-    version: packageJson.version
+    version: versionGet()
   });
 };
