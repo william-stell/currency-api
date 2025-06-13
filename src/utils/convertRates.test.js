@@ -1,4 +1,4 @@
-const convertRates = require('../utils/convertRates');
+import convertRates from "./convertRates";
 
 test('should calculate correct AUD rates from USD rates', () => {
   const usdRates = {

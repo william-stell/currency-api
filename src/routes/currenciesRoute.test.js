@@ -20,16 +20,20 @@ describe('GET /currencies', () => {
     expect(res.body).toEqual({
       data: [
         {
-          id: "USD",
-          name: "United States Dollar"
+          "id": "AUD",
+          "name": "Australian Dollar"
         },
         {
-          id: "EUR",
-          name: "Euro"
+          "id": "EUR",
+          "name": "Euro"
         },
         {
-          id: "JPY",
-          name: "Japanese Yen"
+          "id": "JPY",
+          "name": "Japanese Yen"
+        },
+        {
+          "id": "USD",
+          "name": "United States Dollar"
         }
       ]
     });
