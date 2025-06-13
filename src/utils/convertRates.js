@@ -1,4 +1,5 @@
-function convertRates(rates, newBase) {
+
+export default function convertRates(rates, newBase) {
   const baseValue = parseFloat(rates[newBase]);
   const result = {};
 
@@ -8,5 +9,3 @@ function convertRates(rates, newBase) {
 
   return result;
 }
-
-module.exports = convertRates;
