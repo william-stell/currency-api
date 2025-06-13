@@ -1,6 +1,6 @@
 {
   "name": "currency-api",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A simple and reliable API for real-time currency exchange rates and conversions",
   "type": "module",
   "main": "src/server.js",
