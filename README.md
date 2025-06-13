@@ -10,7 +10,7 @@ Fetches a list of supported currencies.
 
 **Request:**
 
-```
+```bash
 GET /currencies
 ```
 
@@ -32,3 +32,26 @@ GET /currencies
   }
 ]
 ```
+
+**Status Code:** 200 OK
+
+### GET /status
+
+Returns the current status of the API and its version.
+
+**Request:**
+
+```bash
+GET /status
+```
+
+**Response:**
+
+```json
+{
+  "status": "ok",
+  "version": "<current version>"
+}
+```
+
+**Status Code:** 200 OK
