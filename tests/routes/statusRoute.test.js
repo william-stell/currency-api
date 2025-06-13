@@ -1,8 +1,8 @@
 import http from 'http';
 import request from 'supertest';
-import app from '../app.js';
+import app from '../../src/app.js';
 
-import { versionGet } from '../utils/version.js';
+import { versionGet } from '../../src/utils/version.js';
 
 let server;
 

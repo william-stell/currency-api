@@ -1,4 +1,4 @@
-import convertRates from "./convertRates";
+import convertRates from "../../src/utils/convertRates.js";
 
 test('should calculate correct AUD rates from USD rates', () => {
   const usdRates = {

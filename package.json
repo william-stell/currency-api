@@ -25,9 +25,12 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^30.0.0",
     "jest": "^30.0.0",
     "nodemon": "^3.1.10",
+    "remove": "^0.1.5",
     "supertest": "^7.1.1"
   }
 }

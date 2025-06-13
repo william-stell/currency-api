@@ -1,8 +1,8 @@
 
 import http from 'http';
 import request from 'supertest';
-import app from '../app.js';
-import convertRates from '../utils/convertRates.js';
+import app from '../../src/app.js';
+import convertRates from '../../src/utils/convertRates.js';
 
 let server;
 
