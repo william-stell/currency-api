@@ -1,0 +1,19 @@
+# Node modules
+node_modules
+
+# Git folder and files
+.git
+.gitignore
+
+# Logs and misc
+coverage
+*.log
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Ignore docs and markdown files
+docs/
+README.md
+CHANGELOG.md

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0] - 2025-06-16
+### Added
+- Currency rate service that fetches from Coinbase and caches for 5 minutes
+
 ## [0.4.0] - 2025-06-13
 ### Added
 - New API route `/rates/:base` to return all currency rates converted from base currency

@@ -1,8 +1,8 @@
 
 import http from 'http';
 import request from 'supertest';
-import app from '../app.js';
-import convertRates from '../utils/convertRates.js';
+import app from '../../src/app.js';
+import convertRates from '../../src/utils/convertRates.js';
 
 let server;
 
@@ -42,6 +42,16 @@ const testCases = [
 ];
 
 describe('GET /rates/:base', () => {
+
+  beforeAll(() => {
+    jest.useFakeTimers('modern');
+    jest.setSystemTime(new Date('2025-06-16T12:00:00Z'));
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   test.each(testCases)(
     'responds with 200 and correct rates for $base',
     async ({ base, expectedRates }) => {
@@ -50,8 +60,13 @@ describe('GET /rates/:base', () => {
       expect(res.body).toEqual({
         data: {
           base,
-          date: "2025-06-13",
-          rates: expectedRates
+          date: "2025-06-16",
+          rates: {
+            USD: expect.any(String),
+            EUR: expect.any(String),
+            JPY: expect.any(String),
+            AUD: expect.any(String),
+          }
         }
       });
     }

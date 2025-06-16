@@ -1,18 +1,14 @@
 import convertRates from '../utils/convertRates.js';
+import { getRates } from '../services/currencyRatesService.js';
 
-export const ratesGet = (req, res) => {
+export const ratesGet = async (req, res) => {
+
   const base = (req.params.base || 'USD').toUpperCase();
 
-  // Original fixed rates with USD as base
-  const usdRates = {
-    AUD: "1.544214",
-    EUR: "0.867500",
-    JPY: "143.6222",
-    USD: "1"
-  };
+  const usdRates = await getRates(base);
 
   // Validate if requested base is supported
-  if (!usdRates[base]) {
+  if (!usdRates) {
     return res.status(400).json({ error: `Unsupported base currency: ${base}` });
   }
 
@@ -22,7 +18,7 @@ export const ratesGet = (req, res) => {
   res.json({
     data: {
       base,
-      date: "2025-06-13",
+      date: new Date().toISOString().slice(0, 10),
       rates: convertedRates
     }
   });

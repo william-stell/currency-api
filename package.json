@@ -1,6 +1,6 @@
 {
   "name": "currency-api",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "A simple and reliable API for real-time currency exchange rates and conversions",
   "type": "module",
   "main": "src/server.js",
@@ -22,12 +22,16 @@
   },
   "homepage": "https://github.com/william-stell/currency-api#readme",
   "dependencies": {
+    "axios": "^1.10.0",
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^30.0.0",
     "jest": "^30.0.0",
     "nodemon": "^3.1.10",
+    "remove": "^0.1.5",
     "supertest": "^7.1.1"
   }
 }
